@@ -8,16 +8,19 @@ def main():
     pb.cache.set_cache('/home/punnfect/workspace/github.com/punnfect/poke/.cache')
     print(pb.cache.API_CACHE)
 
-    guy = tr.Trainer("guy")
-    guy.bag.slot1 = tr.Ball(tr.Monster('garchomp', 78))
-    print(guy.bag.slot1.monster.name)
-    print(guy.bag.slot1.monster.lvl)
-    print(guy.bag.slot1.monster.hp)
-    print(guy.bag.slot1.monster.atk)
-    print(guy.bag.slot1.monster.defen)
-    print(guy.bag.slot1.monster.spatk)
-    print(guy.bag.slot1.monster.spdef)
-    print(guy.bag.slot1.monster.speed)
+    # guy = tr.Trainer("guy")
+    # guy.bag.slot1.catch('GaRchomp', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
+    # print(guy.bag.slot1.monster)
+
+    # how to get moves
+    # moves = pb.pokemon('garchomp')
+    # for group in moves.moves[1].version_group_details:
+    #     print(group.version_group, group.level_learned_at)
+        
+    # names for every pokemon
+    # names = pb.APIResourceList('pokemon')
+    # for name in names:
+    #     print(name["name"])
 
 
 
