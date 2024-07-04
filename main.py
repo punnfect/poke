@@ -1,5 +1,6 @@
 import pokebase as pb
 import trainer as tr
+import typing_calcs as ty
 
 
 #initial cache in /home/punnfect/.cache/pokebase
@@ -8,12 +9,15 @@ def main():
     pb.cache.set_cache('/home/punnfect/workspace/github.com/punnfect/poke/.cache')
     print(pb.cache.API_CACHE)
 
-    # guy = tr.Trainer("guy")
-    # guy.bag.slot1.catch('GaRchomp', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
-    # print(guy.bag.slot1.monster)
+    guy = tr.Trainer("guy")
+    guy.bag.slot1.catch('GaRchomp', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
+    print(repr(guy.bag.slot1.monster))
+    # print(ty.mon_strengthX2(guy.bag.slot1.monster))
 
     # how to get moves
     # moves = pb.pokemon('garchomp')
+    # print(moves.types[1].type.damage_relations.double_damage_from)
+    
     # for group in moves.moves[1].version_group_details:
     #     print(group.version_group, group.level_learned_at)
         
