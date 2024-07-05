@@ -3,10 +3,9 @@ import trainer as tr
 import typing_calcs as ty
 
 
-#initial cache in /home/punnfect/.cache/pokebase
 
 def main():
-    pb.cache.set_cache('/home/punnfect/workspace/github.com/punnfect/poke/.cache')
+    pb.cache.set_cache('../.cache')
     print(pb.cache.API_CACHE)
 
     guy = tr.Trainer("guy")
