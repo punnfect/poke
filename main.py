@@ -11,15 +11,17 @@ def main():
 
     guy = tr.Trainer("guy")
     guy.bag.slot1.catch('GaRchomp', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
-    print(repr(guy.bag.slot1.monster))
+    print(guy.bag.slot1.monster.move1.name)
     # print(ty.mon_strengthX2(guy.bag.slot1.monster))
-
+    mud = 'mud-shot'
     # how to get moves
     # moves = pb.pokemon('garchomp')
     # print(moves.types[1].type.damage_relations.double_damage_from)
-    
-    # for group in moves.moves[1].version_group_details:
-    #     print(group.version_group, group.level_learned_at)
+    # guy.bag.slot1.monster.move1.set_move(mud)
+    guy.bag.slot1.monster.ability.set_ability("sand-veil")
+    print(guy.bag.slot1.monster.ability)
+    # for group in guy.bag.slot1.monster._hold.moves:
+    #     print(group.move)
         
     # names for every pokemon
     # names = pb.APIResourceList('pokemon')
