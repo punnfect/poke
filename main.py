@@ -10,6 +10,7 @@ def main():
 
     guy = tr.Trainer("guy")
     guy.bag.slot1.catch('GaRchomp', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
+    guy.bag.slot2.catch('altaria', 78, 'Adamant', 24, 12, 30, 16, 23, 5, 74, 190, 91, 48, 84, 23)
     print(guy.bag.slot1.monster.move1.name)
     # print(ty.mon_strengthX2(guy.bag.slot1.monster))
     mud = 'mud-shot'
@@ -17,10 +18,12 @@ def main():
     # moves = pb.pokemon('garchomp')
     # print(moves.types[1].type.damage_relations.double_damage_from)
     # guy.bag.slot1.monster.move1.set_move(mud)
-    guy.bag.slot1.monster.ability.set_ability("sand-veil")
-    print(guy.bag.slot1.monster.ability)
-    # for group in guy.bag.slot1.monster._hold.moves:
-    #     print(group.move)
+    # guy.bag.slot1.monster.ability.set_ability("sand-veil")
+    print(guy.bag.slot1.monster._hold.abilities[0].ability.effect_entries[1].short_effect)
+    # for group in guy.bag.slot2.monster._hold.abilities:
+    # print(group.ability.effect_entries)
+    #     for abi in group.ability.effect_entries:
+    #         print(abi)
         
     # names for every pokemon
     # names = pb.APIResourceList('pokemon')

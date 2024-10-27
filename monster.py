@@ -7,12 +7,12 @@ class Monster:
         print('Catching...')
         self._hold = pb.pokemon(name)
         print(f"You caught a {name}!")
-        self.name = name
+        self.name = name # string
         self.lvl = lvl
-        self.type = []
+        self.type = [] # list of objects
         for type in self._hold.types:
             self.type.append(type.type)
-        self.strength = tc.mon_strengthX2(self)
+        self.strength = tc.mon_strengthX2(self) # strings
         self.strengthX4 = tc.mon_strengthX4(self)
         self.weakness = tc.mon_weakX2(self)
         self.weaknessX4 = tc.mon_weakX4(self)
@@ -41,7 +41,7 @@ class Monster:
 
 class Ability():
     def __init__(self, ability_list=[]):
-        self.name = None
+        self.name = None # string
         self.ability_list = ability_list
         
 
@@ -53,7 +53,7 @@ class Ability():
             
 class Move():
     def __init__(self, moves_list=[]):
-        self.name = None
+        self.name = None # string
         self.moves_list = moves_list
         
 
